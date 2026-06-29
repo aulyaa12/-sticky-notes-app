@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background-color: #f5f1eb;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+/* =====================
+   TOP BAR
+===================== */
+.top-bar {
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.title-app {
+  font-size: 22px;
+  font-weight: 600;
+  color: #2b2b2b;
+  margin: 0;
+}
+
+.add {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #c97b63;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.add:active {
+  transform: scale(0.98);
+}
+
+/* =====================
+   NOTES CONTAINER
+===================== */
+.notes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* =====================
+   NOTE CARD
+===================== */
+.note {
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  margin: 10px;
+  height: 420px;
+  width: 430px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+
+/* =====================
+   TOOLBAR
+===================== */
+.note .tools {
+  background-color: #c97b63;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+  gap: 6px;
+}
+
+.note .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.95rem;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.note .tools button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* =====================
+   TITLE
+===================== */
+.note input.title {
+  border: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 10px 15px;
+  font-family: inherit;
+  border-bottom: 1px solid #eee;
+}
+
+/* =====================
+   EDITOR (CONTENTEDITABLE)
+===================== */
+.editor {
+  flex: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  font-family: inherit;
+  line-height: 1.5;
+  overflow-y: auto;
+  outline: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* =====================
+   VIEW MODE (optional)
+===================== */
+.viewer {
+  padding: 12px 15px;
+  min-height: 250px;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* =====================
+   HIDDEN STATE
+===================== */
+.hidden {
+  display: none;
+}
+
+/* =====================
+   Time
+===================== */
+.time {
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 0.8rem;
+  color: #888;
+}
